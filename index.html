@@ -1,251 +1,124 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Clases de Español con Juan</title>
-        <meta
-            name="description"
-            content="Clases de Español con Juan - Aprendé español de forma personalizada, creativa y cercana."
-        />
-        <meta name="author" content="Juan Manuel Daza" />
-        <meta
-            name="keywords"
-            content="clases de español, spanish lessons, español para extranjeros, conversación, gramática, Buenos Aires, online"
-        />
-        <link
-            rel="icon"
-            href="https://data.daza.ar/favicon/page.png"
-            type="image/png"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css"
-        />
-        <!-- Font Awesome for icons -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script type="module">
+      import { initMdsite } from 'https://mdsite.daza.ar/mdsite.js';
 
-        <!-- Daza Navbar (remote) -->
-        <link rel="stylesheet" href="https://navbar.daza.ar/navbar.css" />
-        <script src="https://navbar.daza.ar/navbar.js"></script>
-        <style>
+      initMdsite({
+        title: 'Clases de Español con Juan',
+        description:
+          'Clases de Español con Juan - Aprendé español de forma personalizada, creativa y cercana.',
+        author: 'Juan Manuel Daza',
+        keywords:
+          'clases de español, spanish lessons, español para extranjeros, conversación, gramática, Buenos Aires, online',
+
+        markdownUrl: 'https://data.daza.ar/md/spanish-lessons.md',
+        targetSelector: '#content',
+        removeContactSection: false,
+        errorMessage: 'Error loading Spanish Lessons',
+
+        showNavbar: true,
+        showPdfButton: true,
+        pdfFilename: 'clases-espanol-juan-2025.pdf',
+        pdfSelector: '.terminal-window',
+
+        contacts: [
+          {
+            href: 'mailto:juanmanueldaza@gmail.com',
+            icon: 'fa-solid fa-envelope',
+            label: 'Email',
+          },
+          {
+            href: 'https://www.linkedin.com/in/juanmanueldaza',
+            icon: 'fa-brands fa-linkedin',
+            label: 'LinkedIn',
+          },
+          {
+            href: 'https://github.com/juanmanueldaza',
+            icon: 'fa-brands fa-github',
+            label: 'GitHub',
+          },
+          {
+            href: 'https://gitlab.com/juanmanueldaza',
+            icon: 'fa-brands fa-gitlab',
+            label: 'GitLab',
+          },
+          {
+            href: 'https://daza.ar/',
+            icon: 'fa-solid fa-globe',
+            label: 'Website',
+          },
+        ],
+
+        customCSS: `
+          :root {
+            --spanish-accent: #c41e3a;
+            --spanish-gold: #ffc72c;
+          }
+
+          @media (prefers-color-scheme: dark) {
             :root {
-                --bg: #f6f8fa;
-                --fg: #23232e;
-                --window-bg: #fff;
-                --window-border: #e1e4e8;
-                --body-color: #23232e;
-                --heading: #23232e;
-                --link: #0366d6;
-                --link-hover: #0056b3;
-                --code-bg: #f6f8fa;
-                --blockquote: #6a737d;
-                --blockquote-border: #d1d5da;
-                --table-bg: #fff;
-                --table-border: #e1e4e8;
-                --button-bg: #f6f8fa;
-                --button-fg: #23232e;
-                --button-border: #e1e4e8;
-                --button-hover-bg: #e1e4e8;
-                --button-hover-fg: #23232e;
-                --spanish-accent: #c41e3a;
-                --spanish-gold: #ffc72c;
+              --spanish-accent: #ff4757;
+              --spanish-gold: #ffd700;
             }
+          }
 
-            @media (prefers-color-scheme: dark) {
-                :root {
-                    --bg: #2c2c32;
-                    --fg: #e6e6e6;
-                    --window-bg: #23232e;
-                    --window-border: #222226;
-                    --body-color: #e6e6e6;
-                    --heading: #fff;
-                    --link: #8ab4f8;
-                    --link-hover: #fff;
-                    --code-bg: #181a1b;
-                    --blockquote: #b0b0b0;
-                    --blockquote-border: #444c56;
-                    --table-bg: #23232e;
-                    --table-border: #444c56;
-                    --button-bg: #23232e;
-                    --button-fg: #e6e6e6;
-                    --button-border: #444c56;
-                    --button-hover-bg: #444c56;
-                    --button-hover-fg: #fff;
-                    --spanish-accent: #ff4757;
-                    --spanish-gold: #ffd700;
-                }
-            }
+          .terminal-window {
+            max-width: 900px;
+          }
 
-            body {
-                background: var(--bg);
-                color: var(--body-color);
-                font-family: "Fira Mono", "Consolas", "Menlo", monospace;
-                margin: 0;
-                min-height: 100vh;
-            }
+          .markdown-body h1 {
+            border-bottom: 3px solid var(--spanish-accent);
+            padding-bottom: 10px;
+          }
 
-            .terminal-window {
-                max-width: 900px;
-                margin: 48px auto;
-                border-radius: 8px;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-                overflow: hidden;
-                background: var(--window-bg);
-                border: 1.5px solid var(--window-border);
-            }
+          .markdown-body .emoji {
+            font-size: 1.2em;
+            margin-right: 0.5em;
+          }
 
-            .terminal-body {
-                background: var(--window-bg);
-                color: var(--body-color);
-                font-family: "Fira Mono", "Consolas", "Menlo", monospace;
-                padding: 32px 32px 40px 32px;
-                min-height: 400px;
-                border-radius: 0 0 8px 8px;
-            }
+          .markdown-body blockquote {
+            font-style: italic;
+            background: var(--code-bg);
+            padding: 1em;
+            border-radius: 4px;
+            margin: 1.5em 0;
+            border-left: 4px solid var(--spanish-accent);
+          }
 
-            .markdown-body {
-                background: none;
-                color: var(--body-color);
-                box-shadow: none;
-                border-radius: 0;
-            }
+          .markdown-body h2 {
+            position: relative;
+            padding-left: 20px;
+          }
 
-            .markdown-body h1,
-            .markdown-body h2,
-            .markdown-body h3,
-            .markdown-body h4,
-            .markdown-body h5,
-            .markdown-body h6 {
-                color: var(--heading);
-                font-weight: 700;
-            }
+          .markdown-body h2::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 20px;
+            background: linear-gradient(to bottom, var(--spanish-accent) 33%, var(--spanish-gold) 33%, var(--spanish-gold) 66%, var(--spanish-accent) 66%);
+            border-radius: 2px;
+          }
 
-            .markdown-body a {
-                color: var(--link);
-            }
+          .markdown-body blockquote p:first-child {
+            font-weight: 600;
+            color: var(--spanish-accent);
+          }
 
-            .markdown-body a:hover {
-                color: var(--link-hover);
-            }
-
-            .markdown-body code,
-            .markdown-body pre {
-                background: var(--code-bg);
-                color: var(--body-color);
-                border-radius: 4px;
-            }
-
-            .markdown-body blockquote {
-                color: var(--blockquote);
-                border-left: 0.25em solid var(--blockquote-border);
-            }
-
-            .markdown-body table {
-                background: var(--table-bg);
-            }
-
-            .markdown-body th,
-            .markdown-body td {
-                border-color: var(--table-border);
-            }
-
-            /* Custom styles for Spanish lessons */
-            .markdown-body h1 {
-                border-bottom: 3px solid var(--spanish-accent);
-                padding-bottom: 10px;
-            }
-
-            .markdown-body .emoji {
-                font-size: 1.2em;
-                margin-right: 0.5em;
-            }
-
-            .markdown-body blockquote {
-                font-style: italic;
-                background: var(--code-bg);
-                padding: 1em;
-                border-radius: 4px;
-                margin: 1.5em 0;
-                border-left: 4px solid var(--spanish-accent);
-            }
-
-            /* Spanish flag colors accent */
-            .markdown-body h2 {
-                position: relative;
-                padding-left: 20px;
-            }
-
-            .markdown-body h2::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 4px;
-                height: 20px;
-                background: linear-gradient(to bottom, var(--spanish-accent) 33%, var(--spanish-gold) 33%, var(--spanish-gold) 66%, var(--spanish-accent) 66%);
-                border-radius: 2px;
-            }
-
-            /* Special styling for testimonials */
-            .markdown-body blockquote p:first-child {
-                font-weight: 600;
-                color: var(--spanish-accent);
-            }
-
-            .markdown-body blockquote p:last-child {
-                margin-bottom: 0;
-                font-size: 0.9em;
-                opacity: 0.8;
-                text-align: right;
-            }
-        </style>
-        <!-- Add jsPDF and html2canvas -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    </head>
-
-    <body>
-        <div id="navbar-container"></div>
-        <div class="terminal-window">
-            <article id="spanish-lessons" class="markdown-body terminal-body"></article>
-        </div>
-        <script type="module">
-            import { fetchAndRenderMarkdown, DownloadPdfUtil } from "https://mdsite.daza.ar/mdsite.js";
-
-            async function downloadPdf() {
-                await DownloadPdfUtil.download({
-                    selector: ".terminal-window",
-                    filename: "clases-espanol-juan-2025.pdf",
-                });
-            }
-
-            window.initDazaNavbar({
-                showPdfButton: true,
-                pdfCallback: downloadPdf,
-                contacts: [
-                    { href: "mailto:juanmanueldaza@gmail.com", icon: "fa-solid fa-envelope", label: "Email" },
-                    { href: "https://www.linkedin.com/in/juanmanueldaza", icon: "fa-brands fa-linkedin", label: "LinkedIn" },
-                    { href: "https://github.com/juanmanueldaza", icon: "fa-brands fa-github", label: "GitHub" },
-                    { href: "https://gitlab.com/juanmanueldaza", icon: "fa-brands fa-gitlab", label: "GitLab" },
-                    { href: "https://daza.ar/", icon: "fa-solid fa-globe", label: "Website" }
-                ]
-            });
-
-            fetchAndRenderMarkdown({
-                url: "https://data.daza.ar/md/spanish-lessons.md",
-                targetSelector: "#spanish-lessons",
-                removeContactSection: false,
-                errorMessage: "Error loading Spanish Lessons"
-            });
-        </script>
-    </body>
+          .markdown-body blockquote p:last-child {
+            margin-bottom: 0;
+            font-size: 0.9em;
+            opacity: 0.8;
+            text-align: right;
+          }
+        `,
+      });
+    </script>
+  </body>
 </html>
